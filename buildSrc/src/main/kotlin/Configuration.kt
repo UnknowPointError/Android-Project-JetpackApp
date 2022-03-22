@@ -35,7 +35,6 @@ object Configuration {
         const val core_version = "1.3.2"
         const val activity_version = "1.4.0"
     }
-//asdas
     /* 依赖 */
     object Dependencies {
         const val android_koin = "io.insert-koin:koin-android:3.2.0-beta-1"
