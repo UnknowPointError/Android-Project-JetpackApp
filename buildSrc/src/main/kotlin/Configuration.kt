@@ -31,7 +31,6 @@ object Configuration {
         const val isSingleModule = false
 
     }
-
     object Versions {
         const val core_version = "1.3.2"
         const val activity_version = "1.4.0"
