@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">JetPack App</string>
     <string name="title_collections">Module Title</string>
+    <string name="KoinActivity">KoinActivity</string>
+    <string name="LifeCycle">LifeCycle</string>
+    <string name="LiveData">LiveData</string>
+    <string name="Material">Material</string>
+    <string name="BackUp">BackUp</string>
+    <string name="Delete">Delete</string>
+    <string name="Settings">Settings</string>
+    <string name="Todo">To Use</string>
+    <string name="DrawerLayout">DrawerLayout</string>
+    <string name="Fruit">Fruit</string>
+    <string name="Animal">Animal</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
