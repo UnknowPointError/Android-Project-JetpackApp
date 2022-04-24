@@ -1,50 +1,32 @@
 plugins {
     id("com.android.application")
-    kotlin("android")
     id("kotlin-android")
+    kotlin("android")
 }
+
+/* @formatter:off */
 android {
-    compileSdk = 31
-    buildFeatures {
-        viewBinding = true
-    }
+    buildFeatures { viewBinding = true }
     defaultConfig {
-        Configuration.AppConfigs.apply {
+        with(Configuration.AppConfigs) {
+            compileSdk = compile_sdk_version
             applicationId = application_id
             minSdk = min_sdk_version
             targetSdk = target_sdk_version
             versionCode = version_code
             versionName = version_name
+            testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
     }
-
     buildTypes {
-        /*release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }*/
-        getByName("debug") {
-            isMinifyEnabled = false
-            isShrinkResources = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-            signingConfig = signingConfigs.findByName("debug")
-        }
-        getByName("release") {
-            isMinifyEnabled = true
-            isShrinkResources = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-            signingConfig = signingConfigs.findByName("release")
+        val buildTypeName = sequenceOf("release","debug")
+        for (typeName in buildTypeName) {
+            getByName(typeName) {
+                isMinifyEnabled = false
+                isShrinkResources = false
+                proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+                signingConfig = signingConfigs.findByName(typeName)
+            }
         }
     }
     compileOptions {
@@ -53,17 +35,11 @@ android {
     }
     kotlinOptions { jvmTarget = "1.8" }
 }
+/* @formatter:on */
 
 dependencies {
     implementation(project(mapOf("path" to ":lib_base")))
-    implementation(Configuration.Dependencies.android_koin)
-    implementation(Configuration.Dependencies.androidx_core)
-    implementation(Configuration.Dependencies.androidx_activity)
-    implementation(Configuration.Dependencies.androidx_appcompat)
-    implementation("com.google.android.material:material:1.3.0")
+    implementation("androidx.appcompat:appcompat:1.3.0")
+    implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    testImplementation("junit:junit:4.+")
-    androidTestImplementation("androidx.test.ext:junit:1.1.2")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
 }

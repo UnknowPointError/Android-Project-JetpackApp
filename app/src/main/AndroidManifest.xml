@@ -11,6 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetPackApp">
         <activity
+            android:name=".material.MaterialActivity"
+            android:exported="false"
+            android:theme="@style/MaterialNoActionBar" />
+        <activity
+            android:name=".livedata.LiveDataActivity"
+            android:exported="false"
+            android:theme="@style/JetPackNoActionBar" />
+        <activity
+            android:name=".lifecycle.LifeCycleActivity"
+            android:exported="false" />
+        <activity
             android:name=".koin.KoinActivity"
             android:exported="false" />
         <activity
@@ -18,7 +29,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
