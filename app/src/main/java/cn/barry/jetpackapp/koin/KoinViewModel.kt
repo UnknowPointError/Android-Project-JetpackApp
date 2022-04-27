@@ -1,5 +1,7 @@
 package cn.barry.jetpackapp.koin
 
+import androidx.lifecycle.ViewModel
+
 /*************************
  * @ProjectName: JetpackApp
  * @Dir_Path: app/src/main/java/cn/barry/jetpackapp
@@ -8,6 +10,9 @@ package cn.barry.jetpackapp.koin
  * @Description:
  **************************/
 
-class MySimplePresenter(val repo: HelloRepository) {
-    fun sayHello() = "${repo.giveHello()} from $this"
+class KoinViewModel(private val repo: KoinRepository) : ViewModel(){
+
+    var count = 0
+
+    fun sayHello() = "${repo.baseInterface.sayHello()} from $this"
 }

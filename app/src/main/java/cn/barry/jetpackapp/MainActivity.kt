@@ -2,31 +2,35 @@ package cn.barry.jetpackapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import androidx.lifecycle.viewModelScope
 import cn.barry.base.startActivity
-import cn.barry.base.toast
 import cn.barry.jetpackapp.databinding.ActivityMainBinding
 import cn.barry.jetpackapp.koin.*
 import cn.barry.jetpackapp.lifecycle.LifeCycleActivity
 import cn.barry.jetpackapp.livedata.LiveDataActivity
 import cn.barry.jetpackapp.material.MaterialActivity
-import kotlinx.coroutines.CoroutineStart
-import kotlinx.coroutines.launch
+import cn.barry.jetpackapp.navigation.NavigationActivity
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
+/*
+@Machine: RedmiBook Pro 15
+@RelativePath: cn\barry\jetpackapp\MainActivity.kt
+@Path: D:\Barry\B_study\Android\Android_Project\JetpackApp\app\src\main\java\cn\barry\jetpackapp\MainActivity.kt
+@Author: Barry
+@Time: 2022/4/28 2:56 周四 上午
+@Description: MainActivity
+*/
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 
     // Lazy injected MySimplePresenter
-    private val firstPresenter: MySimplePresenter by inject()
+    private val firstPresenter: KoinViewModel by inject()
 
     // Lazy Inject ViewModel
-    private val myViewModel: MyViewModel by viewModel()
+    private val myViewModel: KoinViewModel by viewModel()
     private val mBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
-    private val app: SingleClass by inject()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +45,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         buttonLifecycle.setOnClickListener(this@MainActivity)
         buttonLivedata.setOnClickListener(this@MainActivity)
         buttonMaterial.setOnClickListener(this@MainActivity)
+        buttonNavigation.setOnClickListener(this@MainActivity)
     }
 
     private fun initView() {
@@ -56,7 +61,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                      并且返回该实例，这样就可以在Koin的容器中获取该类的实例了。*/
                     startActivity<KoinActivity> { }
                     overridePendingTransition(R.anim.anim_in, R.anim.anim_out)
-                    app.count++
+                    firstPresenter.count++
                     firstPresenter.sayHello()
                 }
                 buttonLifecycle.id -> {
@@ -67,6 +72,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
                 buttonMaterial.id -> {
                     startActivity<MaterialActivity> {  }
+                }
+                buttonNavigation.id -> {
+                    startActivity<NavigationActivity> {  }
                 }
                 else -> {}
             }

@@ -1,5 +1,7 @@
 package cn.barry.jetpackapp.livedata
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 /*************************
@@ -11,4 +13,15 @@ import androidx.lifecycle.ViewModel
  **************************/
 class LiveDataViewModel : ViewModel() {
 
+    private val _number = MutableLiveData<Int>()
+
+    val number: LiveData<Int> get() = _number
+
+    fun addNum() {
+        _number.value = (_number.value ?: 0) + 1
+    }
+
+    fun clearNum() {
+        _number.value = 0
+    }
 }

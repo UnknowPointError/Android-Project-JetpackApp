@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 include(":app")
 include(":lib_base")
+include(":minebbs")

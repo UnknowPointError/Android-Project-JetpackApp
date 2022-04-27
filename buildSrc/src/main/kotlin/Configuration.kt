@@ -34,6 +34,8 @@ object Configuration {
     object Versions {
         const val core_version = "1.7.0"
         const val activity_version = "1.4.0"
+        const val smart_refresh = "2.0.5"
+        const val retrofit_version = "2.9.0"
     }
     /* 依赖 */
     object Dependencies {
@@ -69,10 +71,26 @@ object Configuration {
         * */
         const val android_koin = "io.insert-koin:koin-android:3.1.6"
 
-
         /* Coroutine 协程
         * - GitHub : [https://github.com/Kotlin/kotlinx.coroutines]
         * */
         const val kotlinx_coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+
+        /* SmartRefresh
+        * - GitHub : [https://github.com/scwang90/SmartRefreshLayout]
+        * */
+        const val smart_refresh = "io.github.scwang90:refresh-layout-kernel:${Versions.smart_refresh}" // 核心依赖
+        const val smart_refresh_header = "io.github.scwang90:refresh-header-classics:${Versions.smart_refresh}" //经典刷新头
+        const val smart_refresh_radar = "io.github.scwang90:refresh-header-radar:${Versions.smart_refresh}"     //雷达刷新头
+
+        /* Swiperefreshlayout */
+        const val androidx_swiperefreshlayout = "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+        /*
+        *  Retrofit 库依赖
+        *  - Github: [https://github.com/square/retrofit]
+        * */
+        const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit_version}"
+        const val retrofit_gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit_version}"
     }
 }

@@ -18,6 +18,5 @@ open class BaseApp: Application() {
     override fun onCreate() {
         super.onCreate()
         context = this
-
     }
 }

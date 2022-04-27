@@ -65,12 +65,54 @@
                     app:cardCornerRadius="5dp"
                     app:cardElevation="15dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="@string/LiveData"
-                        android:textSize="40sp" />
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/livedata_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="5dp"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/livedata_addNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:backgroundTint="@color/purple_200"
+                            android:text="@string/AddNum"
+                            android:textStyle="bold"
+                            app:cornerRadius="999dp"
+                            app:rippleColor="@color/purpleDark" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/livedata_subNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:backgroundTint="@color/purple_200"
+                            android:text="@string/SubNum"
+                            android:textStyle="bold"
+                            app:cornerRadius="999dp"
+                            app:rippleColor="@color/purpleDark" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/livedata_clearNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:backgroundTint="@color/purple_200"
+                            android:text="@string/ClearNum"
+                            android:textStyle="bold"
+                            app:cornerRadius="999dp"
+                            app:rippleColor="@color/purpleDark" />
+
+                    </LinearLayout>
 
                 </com.google.android.material.card.MaterialCardView>
 
