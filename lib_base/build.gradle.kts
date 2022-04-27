@@ -35,5 +35,11 @@ dependencies {
         api(androidx_test_junit)
         api(androidx_test_espresso)
         api(kotlinx_coroutines)
+        api(smart_refresh)
+        api(smart_refresh_header)
+        api(smart_refresh_radar)
+        api(androidx_swiperefreshlayout)
+        api(retrofit)
+        api(retrofit_gson)
     }
 }

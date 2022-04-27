@@ -12,7 +12,7 @@ import org.koin.android.ext.android.inject
 class LiveDataActivity : AppCompatActivity() {
 
     private val mBinding by lazy { ActivityLivedataBinding.inflate(layoutInflater) }
-    private val viewModel by inject<LiveDataViewModel>()
+    private val viewModel : LiveDataViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +22,20 @@ class LiveDataActivity : AppCompatActivity() {
                 it.showSnackBar("Data Deleted." ,"Undo") {
                     "Data Restored.".toast()
                 }
+            }
+
+            livedataAddNum.setOnClickListener {
+                viewModel.addNum()
+                viewModel.number.value?.toString()?.toast()
+            }
+
+            livedataClearNum.setOnClickListener {
+                viewModel.clearNum()
+            }
+
+            viewModel.number.observe(this@LiveDataActivity) {
+
+                livedataTextView.text = viewModel.number.value.toString()
             }
         }
     }

@@ -12,6 +12,10 @@
     <string name="DrawerLayout">DrawerLayout</string>
     <string name="Fruit">Fruit</string>
     <string name="Animal">Animal</string>
+    <string name="AddNum">+ 1</string>
+    <string name="SubNum">- 1</string>
+    <string name="ClearNum">set 0</string>
+    <string name="Navigation">Navigation</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

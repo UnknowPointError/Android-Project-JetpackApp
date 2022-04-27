@@ -25,7 +25,6 @@ class MaterialActivity : AppCompatActivity() {
         )
     private val fruitList = ArrayList<Fruit>()
 
-    @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(mBinding.root)
@@ -33,6 +32,7 @@ class MaterialActivity : AppCompatActivity() {
         repeat(50) { fruitList.add(fruit.random()) }
         mBinding.materialRecyclerView.layoutManager = GridLayoutManager(this, 2)
         mBinding.materialRecyclerView.adapter = MaterialRvAdapter(fruitList)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

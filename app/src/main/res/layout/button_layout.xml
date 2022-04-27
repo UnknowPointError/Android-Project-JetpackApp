@@ -55,6 +55,19 @@
             app:rippleColor="@color/purpleDark"
             app:strokeColor="@color/purple_200" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/purple_200"
+            android:text="@string/Navigation"
+            android:textAllCaps="false"
+            app:cornerRadius="999dp"
+            app:rippleColor="@color/purpleDark"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="1dp" />
+
     </LinearLayout>
 
 </ScrollView>
