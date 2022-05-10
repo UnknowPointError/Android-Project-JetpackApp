@@ -1,6 +1,8 @@
 plugins {
-    id ("com.android.library")
-    id ("kotlin-android")
+    with(Configuration.Plugins) {
+        id(android_library)
+        id("kotlin-android")
+    }
 }
 android {
     buildFeatures { viewBinding = true }
@@ -31,6 +33,10 @@ dependencies {
         api(androidx_appcompat)
         api(android_material)
         api(androidx_constraintlayout)
+        api(androidx_lifecycle_ktx)
+        api(androidx_lifecycle_service)
+        api(androidx_lifecycle_livedata_ktx)
+        api(androidx_lifecycle_viewmodel_ktx)
         api(junit_junit)
         api(androidx_test_junit)
         api(androidx_test_espresso)
@@ -41,5 +47,18 @@ dependencies {
         api(androidx_swiperefreshlayout)
         api(retrofit)
         api(retrofit_gson)
+        api(kotlin_serialization)
+        api(okhttp)
+        api(okhttp_loggin)
+        api(logger)
+        api(lottie)
+        api(androidx_navigation_ui_ktx)
+        api(androidx_navigation_fragment_ktx)
+        api(glide)
+        api(glide_compiler)
+        api(photoview)
+        api(volley)
+        api(shimmerlayout)
+        debugApi(leakcanary)
     }
 }

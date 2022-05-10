@@ -1,16 +1,31 @@
 package cn.barry.jetpackapp
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.AlertDialog
+import android.content.ContextWrapper
+import android.content.Intent
+import android.graphics.PixelFormat
+import android.net.Uri
 import android.os.Bundle
+import android.provider.Settings
 import android.view.View
+import android.view.WindowManager
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import cn.barry.base.activity.BaseVBActivity
+import cn.barry.base.app.appContext
+import cn.barry.base.extensions.log
+import cn.barry.base.extensions.logger
+import cn.barry.base.extensions.toast
 import cn.barry.base.startActivity
+import cn.barry.jetpackapp.customview.CustomViewActivity
 import cn.barry.jetpackapp.databinding.ActivityMainBinding
-import cn.barry.jetpackapp.koin.*
+import cn.barry.jetpackapp.koin.KoinActivity
+import cn.barry.jetpackapp.koin.KoinViewModel
 import cn.barry.jetpackapp.lifecycle.LifeCycleActivity
 import cn.barry.jetpackapp.livedata.LiveDataActivity
 import cn.barry.jetpackapp.material.MaterialActivity
-import cn.barry.jetpackapp.navigation.NavigationActivity
-import org.koin.android.ext.android.inject
+import cn.barry.jetpackapp.pixabay.view.PixabayActivity
+import com.barry.minebbs.view.activity.MinebbsActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /*
@@ -22,36 +37,36 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 @Description: MainActivity
 */
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : BaseVBActivity<ActivityMainBinding,KoinViewModel>(), View.OnClickListener {
 
-
-    // Lazy injected MySimplePresenter
-    private val firstPresenter: KoinViewModel by inject()
-
-    // Lazy Inject ViewModel
-    private val myViewModel: KoinViewModel by viewModel()
-    private val mBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(mBinding.root)
-        initView()
-        initEvent()
-    }
-
-    private fun initEvent() = with(mBinding.buttonLayout) {
-        buttonKoinActivity.setOnClickListener(this@MainActivity)
-        buttonLifecycle.setOnClickListener(this@MainActivity)
-        buttonLivedata.setOnClickListener(this@MainActivity)
-        buttonMaterial.setOnClickListener(this@MainActivity)
-        buttonNavigation.setOnClickListener(this@MainActivity)
-    }
-
-    private fun initView() {
+    override fun getViewBinding(): ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
+    override fun getViewModel(): Lazy<KoinViewModel> = viewModel()
+    override fun init(savedInstanceState: Bundle?) {
         title = "MainActivity"
+        with(mBinding.buttonLayout) {
+            buttonKoinActivity.setOnClickListener(this@MainActivity)
+            buttonLifecycle.setOnClickListener(this@MainActivity)
+            buttonLivedata.setOnClickListener(this@MainActivity)
+            buttonMaterial.setOnClickListener(this@MainActivity)
+            buttonNavigation.setOnClickListener(this@MainActivity)
+            buttonPixabay.setOnClickListener(this@MainActivity)
+            buttonCustomView.setOnClickListener(this@MainActivity)
+        }
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { request ->
+            if(request) {
+                "同意了权限".toast()
+            } else {
+                "拒绝了权限".toast()
+            }
+        }.launch(android.Manifest.permission.SYSTEM_ALERT_WINDOW)
+        val metrics = appContext.resources.displayMetrics
+        metrics.apply {
+            "densityDpi : $densityDpi".log()
+            "density : $density".log()
+            "widthPixels : $widthPixels".log()
+            "heightPixels : $heightPixels".log()
+        }
     }
-
     override fun onClick(v: View?) {
         with(mBinding.buttonLayout) {
             when (v?.id) {
@@ -61,8 +76,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                      并且返回该实例，这样就可以在Koin的容器中获取该类的实例了。*/
                     startActivity<KoinActivity> { }
                     overridePendingTransition(R.anim.anim_in, R.anim.anim_out)
-                    firstPresenter.count++
-                    firstPresenter.sayHello()
+                    mViewModel.count++
+                    mViewModel.sayHello()
                 }
                 buttonLifecycle.id -> {
                     startActivity<LifeCycleActivity> { }
@@ -74,10 +89,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     startActivity<MaterialActivity> {  }
                 }
                 buttonNavigation.id -> {
-                    startActivity<NavigationActivity> {  }
+                    startActivity<MinebbsActivity> {  }
+                }
+                buttonPixabay.id -> {
+                    startActivity<PixabayActivity> { }
+                }
+                buttonCustomView.id -> {
+                    startActivity<CustomViewActivity>()
                 }
                 else -> {}
             }
         }
     }
+
 }

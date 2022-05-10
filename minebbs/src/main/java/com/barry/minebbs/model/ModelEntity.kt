@@ -1,6 +1,7 @@
 package com.barry.minebbs.model
 
 import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.Serializable
 
 /*
 @Machine: RedmiBook Pro 15
@@ -10,9 +11,10 @@ import com.google.gson.annotations.SerializedName
 */
 
 object ModelEntity {
+
     object GET {
 
-        data class BaseEntity(
+        data class TemplateEntity(
 
             /* 请求是否成功 */
             @SerializedName("success")
@@ -40,12 +42,11 @@ object ModelEntity {
 
             /* 数据 */
             @SerializedName("data")
-            val data: MutableList<Any>?,
+            val data: List<Any>?,
         )
 
     }
 
     object POST {
-
     }
 }

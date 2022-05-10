@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="BaseOk" translatable="false">确定</string>
+    <string name="BaseRestart" translatable="false">重启APP</string>
+    <string name="BaseErrorTitle" translatable="false">[错误] : 增加了新的BUG!</string>
+</resources>

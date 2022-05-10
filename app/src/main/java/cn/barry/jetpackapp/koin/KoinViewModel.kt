@@ -1,6 +1,7 @@
 package cn.barry.jetpackapp.koin
 
 import androidx.lifecycle.ViewModel
+import cn.barry.base.viewmodel.BaseViewModel
 
 /*************************
  * @ProjectName: JetpackApp
@@ -10,8 +11,7 @@ import androidx.lifecycle.ViewModel
  * @Description:
  **************************/
 
-class KoinViewModel(private val repo: KoinRepository) : ViewModel(){
-
+class KoinViewModel(private val repo: KoinRepository) : BaseViewModel(){
     var count = 0
 
     fun sayHello() = "${repo.baseInterface.sayHello()} from $this"

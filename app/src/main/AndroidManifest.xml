@@ -3,12 +3,16 @@
     package="cn.barry.jetpackapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.HIDE_OVERLAY_WINDOWS" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
-        android:name=".JetPackApplication"
+        android:name=".app.JetpackApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,7 +20,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetPackApp">
         <activity
-            android:name=".navigation.NavigationActivity"
+            android:name=".customview.CustomViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pixabay.view.PixabayActivity"
+            android:exported="false"
+            android:theme="@style/MaterialNoActionBar" />
+        <activity
+            android:name="com.barry.minebbs.view.activity.MinebbsActivity"
             android:exported="false" />
         <activity
             android:name=".material.MaterialActivity"
