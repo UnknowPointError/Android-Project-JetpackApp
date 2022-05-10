@@ -9,23 +9,55 @@
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/drawable/asdas.xml" value="0.125" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/drawable/button_round_pressed.xml" value="0.108" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/drawable/button_round_selector.xml" value="0.169" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/drawable/ic_baseline_looks_one_24.xml" value="0.118" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/drawable/ic_eeee.xml" value="0.212" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.148" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/drawable/linerlayout_water_selector.xml" value="0.108" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/drawable/search_corner.xml" value="0.207" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/drawable/statusbar_shape_bg.xml" value="0.125" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/drawable/tablayout_shape_bg.xml" value="0.114" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/aaa.xml" value="0.29739583333333336" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_asda.xml" value="0.10677083333333333" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_asdasdsad.xml" value="0.10677083333333333" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_custom.xml" value="0.10677083333333333" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_custom_view.xml" value="0.12" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_koin.xml" value="0.13489583333333333" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_lifecycle.xml" value="0.29739583333333336" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_livedata.xml" value="0.264" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_main.xml" value="0.21557971014492755" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_main2.xml" value="0.10677083333333333" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_main_activitys.xml" value="0.10677083333333333" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_material.xml" value="0.2" />
-        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_navigation.xml" value="0.29739583333333336" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_navigation.xml" value="0.264" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_pixabay.xml" value="0.264" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/activity_test.xml" value="0.10677083333333333" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/asd.xml" value="0.29739583333333336" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/button_layout.xml" value="0.22549019607843138" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/fragment_blank.xml" value="0.264" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/fragment_user_icon_full_screen.xml" value="0.27760416666666665" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/fragment_view_four.xml" value="0.22010869565217392" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/fragment_view_one.xml" value="0.22010869565217392" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/fragment_view_three.xml" value="0.22010869565217392" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/fragment_view_two.xml" value="0.22010869565217392" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/material_rv_fruit_item.xml" value="0.10677083333333333" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/material_rv_fruititem.xml" value="0.1" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/pixabay_rv_image_item.xml" value="0.22871376811594202" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/layout/test.xml" value="0.29739583333333336" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/menu/main_menu_bottom.xml" value="0.10677083333333333" />
         <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/menu/material_toolbar.xml" value="0.29739583333333336" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/app/src/main/res/menu/pixabay_refresh_menu.xml" value="0.26666666666666666" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/lib_base/src/main/res/drawable/base_dialog_circle_drawable.xml" value="0.139" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/lib_base/src/main/res/drawable/basebutton_color.xml" value="0.2715" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/lib_base/src/main/res/drawable/button_color.xml" value="0.207" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/lib_base/src/main/res/layout/base_app_exception_dialog.xml" value="0.264" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/lib_base/src/main/res/layout/base_app_exception_title.xml" value="0.2296195652173913" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/lib_base/src/main/res/layout/base_dialog_loading.xml" value="0.27760416666666665" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/minebbs/src/main/res/layout/activity_minebbs.xml" value="0.20153985507246377" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/minebbs/src/main/res/layout/actvity_minbbs.xml" value="0.20153985507246377" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/minebbs/src/main/res/layout/fragment_fullscreen_user_icon.xml" value="0.1" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/minebbs/src/main/res/layout/fragment_user_icon.xml" value="0.2" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/minebbs/src/main/res/layout/fragment_user_icon_full_screen.xml" value="0.2630208333333333" />
+        <entry key="..\:/Barry/B_study/Android/Android_Project/JetpackApp/minebbs/src/main/res/layout/recyclerview_usericon_item.xml" value="0.27760416666666665" />
       </map>
     </option>
   </component>

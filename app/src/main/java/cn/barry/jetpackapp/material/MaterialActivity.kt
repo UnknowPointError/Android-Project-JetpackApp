@@ -1,14 +1,9 @@
 package cn.barry.jetpackapp.material
 
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.WindowManager
-import android.widget.GridLayout
-import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.GridLayoutManager
-import cn.barry.base.toast
 import cn.barry.jetpackapp.R
 import cn.barry.jetpackapp.databinding.ActivityMaterialBinding
 

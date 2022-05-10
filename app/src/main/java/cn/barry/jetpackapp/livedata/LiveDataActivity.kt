@@ -3,11 +3,9 @@ package cn.barry.jetpackapp.livedata
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import cn.barry.base.showSnackBar
-import cn.barry.base.toast
+import cn.barry.base.extensions.showSnackBar
+import cn.barry.base.extensions.toast
 import cn.barry.jetpackapp.databinding.ActivityLivedataBinding
-import com.google.android.material.snackbar.Snackbar
-import org.koin.android.ext.android.inject
 
 class LiveDataActivity : AppCompatActivity() {
 

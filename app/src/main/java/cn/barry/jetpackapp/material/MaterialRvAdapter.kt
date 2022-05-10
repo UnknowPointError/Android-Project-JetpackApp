@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import cn.barry.jetpackapp.R
-import cn.barry.jetpackapp.databinding.MaterialRvFruititemBinding
+import cn.barry.jetpackapp.databinding.MaterialRvFruitItemBinding
 
 /*************************
  * @ProjectName: JetpackApp
@@ -16,13 +16,13 @@ import cn.barry.jetpackapp.databinding.MaterialRvFruititemBinding
  **************************/
 class MaterialRvAdapter(val fruitList: ArrayList<Fruit>) : RecyclerView.Adapter<MaterialRvAdapter.ViewHolder>() {
 
-    inner class ViewHolder(mBinding : MaterialRvFruititemBinding) : RecyclerView.ViewHolder(mBinding.root) {
+    inner class ViewHolder(mBinding : MaterialRvFruitItemBinding) : RecyclerView.ViewHolder(mBinding.root) {
         val fruitImage = mBinding.materialRvImageView
         val fruitText = mBinding.materialRvTextView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(MaterialRvFruititemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        return ViewHolder(MaterialRvFruitItemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
 

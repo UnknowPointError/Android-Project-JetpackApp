@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="baseRedError">#FD0000</color>
+    <color name="base_buttonBackground">#BE9AE3</color>
+    <color name="base_buttonRipper">#7D3DEF</color>
+    <color name="base_titleError">#E1CA00</color>
+</resources>

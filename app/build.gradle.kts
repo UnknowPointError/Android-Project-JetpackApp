@@ -1,7 +1,10 @@
 plugins {
-    id("com.android.application")
+    id(Configuration.Plugins.android_application)
+    id(Configuration.Plugins.kotlin_parcelize)
     id("kotlin-android")
     kotlin("android")
+    kotlin(Configuration.Plugins.kapt)
+    kotlin(Configuration.Plugins.serialization) version Configuration.Versions.kotlin_version
 }
 
 /* @formatter:off */
@@ -36,8 +39,19 @@ android {
     kotlinOptions { jvmTarget = "1.8" }
 }
 /* @formatter:on */
+kapt {
+    arguments { arg("AROUTER_MODULE_NAME", project.name) }
+}
+
 
 dependencies {
     implementation(project(mapOf("path" to ":lib_base")))
     implementation(project(mapOf("path" to ":minebbs")))
+
+    api(Configuration.Dependencies.arouter_api)
+    implementation("androidx.appcompat:appcompat:1.3.0")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    kapt(Configuration.Dependencies.arouter_compiler)
 }

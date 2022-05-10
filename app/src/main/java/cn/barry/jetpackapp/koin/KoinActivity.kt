@@ -1,10 +1,8 @@
 package cn.barry.jetpackapp.koin
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import cn.barry.base.toast
+import cn.barry.base.activity.BaseVBActivity
 import cn.barry.jetpackapp.databinding.ActivityKoinBinding
-import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /*
@@ -16,21 +14,17 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 @Description: KoinActivity
 */
 
-class KoinActivity : AppCompatActivity() {
+class KoinActivity : BaseVBActivity<ActivityKoinBinding,KoinViewModel>() {
 
-    private val firstPresenter: KoinViewModel by inject()
-    private val mBinding by lazy { ActivityKoinBinding.inflate(layoutInflater) }
-    private val _viewModel: Lazy<KoinViewModel> = viewModel()
-    private val viewmodel by lazy { _viewModel.value }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(mBinding.root)
+    override fun getViewBinding(): ActivityKoinBinding = ActivityKoinBinding.inflate(layoutInflater)
+    override fun getViewModel(): Lazy<KoinViewModel> = viewModel()
+    override fun init(savedInstanceState: Bundle?) {
         with(mBinding) {
-            viewmodel.count++
-            koinCountText.text = viewmodel.count.toString()
-            koinCenterText.text = firstPresenter.sayHello()
-            viewmodel.sayHello().toast()
+            mViewModel.count++
+            koinCountText.text = mViewModel.count.toString()
+            koinCenterText.text = mViewModel.sayHello()
         }
     }
+
+
 }

@@ -1,9 +1,12 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    with(Configuration.Plugins) {
+        id(android_library)
+        id("kotlin-android")
+    }
 }
 
 android {
+    buildFeatures { viewBinding = true }
     with(Configuration.AppConfigs) {
         compileSdk = compile_sdk_version
         defaultConfig {
