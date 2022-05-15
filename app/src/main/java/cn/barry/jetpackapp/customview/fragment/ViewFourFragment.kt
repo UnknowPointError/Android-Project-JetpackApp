@@ -13,7 +13,7 @@ class ViewFourFragment : BaseVBFragment<FragmentViewFourBinding,CustomViewViewMo
 
     override fun getViewModel(): Lazy<CustomViewViewModel> = viewModel()
 
-    override fun init(view: View, savedInstanceState: Bundle?) {
+    override fun doOnInitViewCreate(view: View, savedInstanceState: Bundle?) {
 
     }
 }

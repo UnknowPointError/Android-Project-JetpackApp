@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/baidu_image_nav"
+    app:startDestination="@id/baiduImageFragment">
+
+    <fragment
+        android:id="@+id/baiduImageFragment"
+        android:name="cn.barry.jetpackapp.baiduimage.view.fragment.BaiduImageFragment"
+        android:label="BaiduImageFragment">
+        <action
+            android:id="@+id/action_baiduImageFragment_to_baiduImageAlbumFragment"
+            app:destination="@id/baiduImageAlbumFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/baiduImageAlbumFragment"
+        android:name="cn.barry.jetpackapp.baiduimage.view.fragment.BaiduImageAlbumFragment"
+        android:label="BaiduImageAlbumFragment">
+        <action
+            android:id="@+id/action_baiduImageAlbumFragment_to_baiduImageFragment"
+            app:destination="@id/baiduImageFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_baiduImageAlbumFragment_to_baiduImageAlbumPhotoFragment"
+            app:destination="@id/baiduImageAlbumPhotoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/baiduImageAlbumPhotoFragment"
+        android:name="cn.barry.jetpackapp.baiduimage.view.fragment.BaiduImageAlbumPhotoFragment"
+        android:label="fragment_baidu_image_album_photo"
+        tools:layout="@layout/fragment_baidu_image_album_photo">
+        <action
+            android:id="@+id/action_baiduImageAlbumPhotoFragment_to_baiduImageAlbumFragment"
+            app:destination="@id/baiduImageAlbumFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+</navigation>

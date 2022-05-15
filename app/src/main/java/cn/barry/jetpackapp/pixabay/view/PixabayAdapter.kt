@@ -1,9 +1,12 @@
 package cn.barry.jetpackapp.pixabay.view
 
 import android.graphics.drawable.Drawable
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import cn.barry.base.adapter.BaseRvVBListAdapter
+import cn.barry.base.extensions.logger
 import cn.barry.jetpackapp.R
 import cn.barry.jetpackapp.databinding.PixabayRvImageItemBinding
 import cn.barry.jetpackapp.pixabay.PixabayEntity_Child_Image
@@ -29,6 +32,10 @@ class PixabayAdapter : BaseRvVBListAdapter<PixabayEntity_Child_Image, PixabayRvI
 
     override fun ViewHolder.initCreateViewHolder(parent: ViewGroup, viewType: Int){
         itemView.setOnClickListener {
+            Bundle().apply {
+                putParcelable("PHOTO", getItem(adapterPosition))
+                itemView.findNavController().navigate(R.id.action_pixabayFragment_to_pixabayPhotoFragment,this)
+            }
         }
     }
 

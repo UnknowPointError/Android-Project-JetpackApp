@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import cn.barry.base.dialog.LoadingAnimDialog
 import cn.barry.base.extensions.logError
-import cn.barry.base.extensions.toast
 import cn.barry.base.viewmodel.BaseViewModel
 import cn.barry.base.viewmodel.doOnError
 import cn.barry.base.viewmodel.doOnLoading
@@ -26,16 +25,17 @@ import cn.barry.base.viewmodel.doOnSuccess
  **************************/
 abstract class BaseVBFragment<out VB : ViewBinding, out VM : BaseViewModel> : Fragment() {
 
-    protected var isNeedLazy = false
-    protected var lazyTime = 300L
-    private val mHandler : Handler = Handler(Looper.getMainLooper())
-    private var _mBinding: VB? = null
-    protected val mBinding get() = _mBinding!!
+    protected var mIsNeedNetworkLoading = false
+    protected var mIsNeedLazy = false
+    protected var mHandler : Handler? = Handler(Looper.getMainLooper())
+    protected var mLazyTime = 300L
     protected val mViewModel by lazy { getViewModel().value }
+    protected val mBinding get() = _mBinding!!
+    private var _mBinding: VB? = null
 
     abstract fun getViewBinding(inflater: LayoutInflater): VB
     abstract fun getViewModel(): Lazy<VM>
-    abstract fun init(view:View,savedInstanceState: Bundle?)
+    abstract fun doOnInitViewCreate(view:View,savedInstanceState: Bundle?)
 
     open fun lazyData() { }
 
@@ -45,8 +45,8 @@ abstract class BaseVBFragment<out VB : ViewBinding, out VM : BaseViewModel> : Fr
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init(view,savedInstanceState)
-        mViewModel.viewState.observe(viewLifecycleOwner) { viewState ->
+        doOnInitViewCreate(view,savedInstanceState)
+        if (mIsNeedNetworkLoading) mViewModel.viewState.observe(viewLifecycleOwner) { viewState ->
             viewState
                 .doOnLoading { LoadingAnimDialog.show(parentFragmentManager) }
                 .doOnSuccess { LoadingAnimDialog.dismiss(parentFragmentManager) }
@@ -58,10 +58,11 @@ abstract class BaseVBFragment<out VB : ViewBinding, out VM : BaseViewModel> : Fr
     }
     override fun onResume(){
         super.onResume()
-        if(!isHidden && isNeedLazy) mHandler.postDelayed({ lazyData() },lazyTime)
+        if(!isHidden && mIsNeedLazy) mHandler?.postDelayed({ lazyData() },mLazyTime)
     }
-    override fun onDestroyView(){
+    override fun onDestroyView() {
         super.onDestroyView()
         _mBinding = null
+        mHandler = null
     }
 }

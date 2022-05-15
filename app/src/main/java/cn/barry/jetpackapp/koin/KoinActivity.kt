@@ -17,14 +17,13 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class KoinActivity : BaseVBActivity<ActivityKoinBinding,KoinViewModel>() {
 
     override fun getViewBinding(): ActivityKoinBinding = ActivityKoinBinding.inflate(layoutInflater)
+
     override fun getViewModel(): Lazy<KoinViewModel> = viewModel()
-    override fun init(savedInstanceState: Bundle?) {
-        with(mBinding) {
-            mViewModel.count++
-            koinCountText.text = mViewModel.count.toString()
-            koinCenterText.text = mViewModel.sayHello()
+    override fun doInitOnCreate(savedInstanceState: Bundle?) {
+        mViewModel.addCount()
+        mViewModel.count.observe(this) {
+            mBinding.koinCountText.text = it.toString()
+            mBinding.koinCenterText.text = it.toString()
         }
     }
-
-
 }

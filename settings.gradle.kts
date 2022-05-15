@@ -1,12 +1,16 @@
+@Suppress("UnstableApiUsage")   /* https://cache.one/read/16327826 */
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
         maven("https://www.jitpack.io")
-        jcenter() // Warning: this repository is going to shut down soon
+        maven("https://maven.aliyun.com/nexus/content/groups/public/")
+        maven("https://maven.aliyun.com/nexus/content/repositories/jcenter")
+        flatDir { dirs("libs") }
     }
 }
+rootProject.name = "JetpackApp"
 include(":app")
 include(":lib_base")
 include(":minebbs")

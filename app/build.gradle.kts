@@ -6,7 +6,6 @@ plugins {
     kotlin(Configuration.Plugins.kapt)
     kotlin(Configuration.Plugins.serialization) version Configuration.Versions.kotlin_version
 }
-
 /* @formatter:off */
 android {
     buildFeatures { viewBinding = true }
@@ -32,26 +31,16 @@ android {
             }
         }
     }
+    @Suppress("UnstableApiUsage")
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions { jvmTarget = "1.8" }
+    kotlinOptions { jvmTarget = "17" }
+ namespace = "cn.barry.jetpackapp"
 }
-/* @formatter:on */
-kapt {
-    arguments { arg("AROUTER_MODULE_NAME", project.name) }
-}
-
 
 dependencies {
     implementation(project(mapOf("path" to ":lib_base")))
     implementation(project(mapOf("path" to ":minebbs")))
-
-    api(Configuration.Dependencies.arouter_api)
-    implementation("androidx.appcompat:appcompat:1.3.0")
-    implementation("com.google.android.material:material:1.4.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    kapt(Configuration.Dependencies.arouter_compiler)
 }

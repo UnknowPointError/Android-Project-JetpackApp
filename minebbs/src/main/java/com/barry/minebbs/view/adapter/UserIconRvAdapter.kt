@@ -27,7 +27,7 @@ import kotlinx.coroutines.delay
 
 class UserIconRvAdapter(val imageList : MutableList<Int>) : BaseRvVBAdapter<RecyclerviewUsericonItemBinding>() {
 
-    var itemView : ((mBinding: RecyclerviewUsericonItemBinding) -> Unit)? = null
+    var itemViewCallback : ((mBinding: RecyclerviewUsericonItemBinding) -> Unit)? = null
     var drawable : Drawable? = null
 
     override fun getViewBinding(parent: ViewGroup) = RecyclerviewUsericonItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
@@ -36,7 +36,7 @@ class UserIconRvAdapter(val imageList : MutableList<Int>) : BaseRvVBAdapter<Recy
         with(holder.mBinding) {
             val imageInfo = imageList[position]
             Glide.with(appContext)
-                .load(MinebbsConfig.Base_Url.plus("v1/avatar/$imageInfo"))
+                .load(MinebbsConfig.URL.plus("v1/avatar/$imageInfo"))
                 .into(object : CustomTarget<Drawable>(){
                     override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
                         drawable = resource
@@ -50,8 +50,10 @@ class UserIconRvAdapter(val imageList : MutableList<Int>) : BaseRvVBAdapter<Recy
         }
     }
 
-    override fun RecyclerviewUsericonItemBinding.initCreateViewHolder() {
-        root.setOnClickListener { itemView?.let { it(this) } }
+    override fun BaseRvVBHolder.initCreateViewHolder() {
+        itemView.setOnClickListener {
+            itemViewCallback?.apply { (mBinding) }
+        }
     }
 
     override fun getItemCount(): Int  = imageList.size

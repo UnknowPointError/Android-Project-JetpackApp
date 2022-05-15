@@ -23,7 +23,7 @@ class UserIconFullScreenFragment : BaseVBFragment<FragmentUserIconFullScreenBind
     override fun getViewModel(): Lazy<MinebbsViewModel> = requireActivity().viewModel()
     override fun getViewBinding(inflater: LayoutInflater): FragmentUserIconFullScreenBinding = FragmentUserIconFullScreenBinding.inflate(inflater)
 
-    override fun init(view: View, savedInstanceState: Bundle?) {
+    override fun doOnInitViewCreate(view: View, savedInstanceState: Bundle?){
         mBinding.userIconFullScreenImageView.setImageDrawable(mViewModel.drawable)
     }
 }

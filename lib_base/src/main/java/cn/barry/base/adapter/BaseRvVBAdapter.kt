@@ -15,19 +15,11 @@ import androidx.viewbinding.ViewBinding
  **************************/
 abstract class BaseRvVBAdapter<VB : ViewBinding>() : RecyclerView.Adapter<BaseRvVBAdapter<VB>.BaseRvVBHolder>() {
 
-
     inner class BaseRvVBHolder(val mBinding : VB) : RecyclerView.ViewHolder(mBinding.root)
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseRvVBHolder {
-        val mBinding = getViewBinding(parent)
-        mBinding.initCreateViewHolder()
-        return BaseRvVBHolder(mBinding)
-    }
-
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)= BaseRvVBHolder(getViewBinding(parent)).also { it.initCreateViewHolder() }
 
     abstract fun getViewBinding(parent: ViewGroup) : VB
 
-
-    open fun VB.initCreateViewHolder() {  }
+    open fun BaseRvVBHolder.initCreateViewHolder() {  }
 }
