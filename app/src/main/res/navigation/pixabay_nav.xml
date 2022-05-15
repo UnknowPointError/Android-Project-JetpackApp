@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pixabay_nav.xml"
+    app:startDestination="@id/pixabayFragment">
+
+    <fragment
+        android:id="@+id/pixabayFragment"
+        android:name="cn.barry.jetpackapp.pixabay.view.PixabayFragment"
+        android:label="PixabayFragment">
+
+        <action
+            android:id="@+id/action_pixabayFragment_to_pixabayPhotoFragment"
+            app:destination="@id/pixabayPhotoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/pixabayPhotoFragment"
+        android:name="cn.barry.jetpackapp.pixabay.view.PixabayPhotoFragment"
+        android:label="fragment_pixabay_photo"
+        tools:layout="@layout/fragment_pixabay_photo">
+
+        <action
+            android:id="@+id/action_pixabayPhotoFragment_to_pixabayFragment"
+            app:destination="@id/pixabayFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+
+</navigation>

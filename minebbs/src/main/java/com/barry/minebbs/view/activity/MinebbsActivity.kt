@@ -20,10 +20,15 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
  * @formatter:off
  *************************/
 class MinebbsActivity : BaseVBActivity<ActivityMinebbsBinding, MinebbsViewModel>() {
-    init { isNeedLazy = true }
+
+    init {
+        mIsNeedLazy = true
+        mIsNeedNetWorkLoading = true
+    }
+
     override fun getViewBinding() = ActivityMinebbsBinding.inflate(layoutInflater)
     override fun getViewModel(): Lazy<MinebbsViewModel> = viewModel()
-    override fun init(savedInstanceState: Bundle?) {
+    override fun doInitOnCreate(savedInstanceState: Bundle?){
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_fragmentContainerView) as NavHostFragment
         val controller = navHostFragment.navController
         NavigationUI.setupActionBarWithNavController(this,controller)
@@ -31,13 +36,11 @@ class MinebbsActivity : BaseVBActivity<ActivityMinebbsBinding, MinebbsViewModel>
             dataList.toString().logInfo()
         }
     }
-
+    override fun lazyData(){
+        mViewModel.getTemplateEntityInfo()
+    }
     override fun onSupportNavigateUp(): Boolean{
         return Navigation.findNavController(this,R.id.nav_fragmentContainerView).navigateUp()
     }
 
-
-    override fun lazyData(){
-        mViewModel.getTemplateEntityInfo()
-    }
 }

@@ -1,5 +1,7 @@
 package cn.barry.jetpackapp.koin
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import cn.barry.base.viewmodel.BaseViewModel
 
@@ -12,7 +14,12 @@ import cn.barry.base.viewmodel.BaseViewModel
  **************************/
 
 class KoinViewModel(private val repo: KoinRepository) : BaseViewModel(){
-    var count = 0
+    private val _count = MutableLiveData<Int>()
+    val count: LiveData<Int> get() = _count
 
     fun sayHello() = "${repo.baseInterface.sayHello()} from $this"
+
+    fun addCount() {
+        _count.value = (_count.value ?: 0) + 1
+    }
 }

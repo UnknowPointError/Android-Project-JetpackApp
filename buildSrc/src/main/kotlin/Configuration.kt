@@ -87,7 +87,7 @@ object Configuration {
         /* Material Design 界面组件
         * - MvnRepository : [https://mvnrepository.com/artifact/com.google.android.material/material]
         * */
-        const val android_material = "com.google.android.material:material:1.5.0"
+        const val android_material = "com.google.android.material:material:1.6.0"
 
         /* Kotlin Android 注入库
         * - Home : [https://insert-koin.io/]
@@ -177,6 +177,10 @@ object Configuration {
         * */
         const val shimmerlayout = "io.supercharge:shimmerlayout:2.1.0"
 
+        /* 屏幕适配
+        * - Github : [https://github.com/JessYanCoding/AndroidAutoSize]
+        * */
+        const val autosize = "com.github.JessYanCoding:AndroidAutoSize:v1.2.1"
     }
 
     object Plugins {

@@ -2,7 +2,6 @@ package cn.barry.jetpackapp.customview
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import cn.barry.base.activity.BaseVBActivity
 import cn.barry.jetpackapp.R
@@ -28,22 +27,16 @@ class CustomViewActivity : BaseVBActivity<ActivityCustomViewBinding, CustomViewV
 
     private var mContainerAdapter: ContainerAdapter? = null
     private val fragmentArray: Array<Fragment> = arrayOf(ViewOneFragment(),ViewTwoFragment(),ViewThreeFragment(),ViewFourFragment())
+
     override fun getViewBinding() = ActivityCustomViewBinding.inflate(layoutInflater)
-
     override fun getViewModel(): Lazy<CustomViewViewModel> = viewModel()
-
-    override fun init(savedInstanceState: Bundle?) {
-        mBinding.customViewViewPager.apply {
-            isUserInputEnabled = false
-            mContainerAdapter = ContainerAdapter(fragmentArray,supportFragmentManager,lifecycle)
-            adapter = mContainerAdapter
-            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-                override fun onPageSelected(position: Int) {
-                    super.onPageSelected(position)
-                    mBinding.bnvContainer.menu.getItem(position).isChecked = true
-                }
-            })
-        }
+    override fun doInitOnCreate(savedInstanceState: Bundle?) {
+        mBinding.customViewViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                mBinding.bnvContainer.menu.getItem(position).isChecked = true
+            }
+        })
         mBinding.bnvContainer.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.menu_bottom_home -> switchFragment(0)
@@ -55,15 +48,14 @@ class CustomViewActivity : BaseVBActivity<ActivityCustomViewBinding, CustomViewV
             true
         }
     }
+    override fun onDestroy(){
+        super.onDestroy()
+        mContainerAdapter = null
+    }
 
     private fun switchFragment(position: Int) {
         if (mBinding.customViewViewPager.currentItem != position) {
             mBinding.customViewViewPager.setCurrentItem(position, false)
         }
-    }
-
-    override fun onDestroy(){
-        super.onDestroy()
-        mContainerAdapter = null
     }
 }

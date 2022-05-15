@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- @formatter:off -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"> <!-- @formatter:on -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/baidu_image_album_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

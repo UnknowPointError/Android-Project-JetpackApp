@@ -16,13 +16,15 @@ android {
     }
 
     /* Java版本设置 */
+    @Suppress("UnstableApiUsage")
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     /* Kotlin 相关配置 */
-    kotlinOptions { jvmTarget = "1.8" }
+    kotlinOptions { jvmTarget = "17" }
+    namespace = "cn.barry.base"
 }
 
 dependencies {
@@ -59,6 +61,7 @@ dependencies {
         api(photoview)
         api(volley)
         api(shimmerlayout)
+        api(autosize)
         debugApi(leakcanary)
     }
 }

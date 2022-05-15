@@ -26,7 +26,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UserIconFragment : BaseVBFragment<FragmentUserIconBinding, MinebbsViewModel>() {
 
-    init { isNeedLazy = true }
+    init { mIsNeedLazy = true }
 
     val adapter = UserIconRvAdapter(mutableListOf(1))
 
@@ -38,11 +38,11 @@ class UserIconFragment : BaseVBFragment<FragmentUserIconBinding, MinebbsViewMode
         mBinding.userIconRecyclerView.adapter = adapter
     }
 
-    override fun init(view: View, savedInstanceState: Bundle?) {
+    override fun doOnInitViewCreate(view: View, savedInstanceState: Bundle?) {
         mViewModel.userIconEntityInfo.observe(viewLifecycleOwner) {
 
         }
-        adapter.itemView = { mBinding ->
+        adapter.itemViewCallback = { mBinding ->
             mViewModel.drawable = adapter.getDrawables()
             Navigation.findNavController(mBinding.root).navigate(R.id.action_userIcon_to_fullScreen)
         }

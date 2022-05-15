@@ -1,6 +1,7 @@
 package cn.barry.base.network
 
 import cn.barry.base.extensions.callEnquenFlow
+import cn.barry.base.extensions.logger
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow

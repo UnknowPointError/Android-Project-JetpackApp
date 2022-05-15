@@ -1,6 +1,8 @@
 package cn.barry.jetpackapp.pixabay.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 object ModelEntity {
 
@@ -18,6 +20,7 @@ object ModelEntity {
             val dataArray: List<PixabayImageEntity>
         ) {
 
+            @Parcelize
             data class PixabayImageEntity(
 
                 @SerializedName("id")
@@ -31,7 +34,7 @@ object ModelEntity {
 
                 @SerializedName("previewURL")
                 val preUrl: String
-            )
+            ) : Parcelable
         }
 
     }

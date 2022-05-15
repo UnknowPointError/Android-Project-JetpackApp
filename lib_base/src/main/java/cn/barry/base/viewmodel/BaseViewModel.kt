@@ -47,7 +47,9 @@ open class BaseViewModel : ViewModel() {
                     .catch { cause -> baseViewState.setState(ViewState.Error(msg = cause.localizedMessage)) }
                     .flowOn(Dispatchers.IO)
                     .collect { successBlock(it) }
-            }.onFailure { cause -> baseViewState.setState(ViewState.Error(msg = cause.localizedMessage)) }
+            }.onFailure { cause -> baseViewState.setState(ViewState.Error(msg = cause.localizedMessage))
+                "failure : $cause".logger()
+            }
         }
     }
 

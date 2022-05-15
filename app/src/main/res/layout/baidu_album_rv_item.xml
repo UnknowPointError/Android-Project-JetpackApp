@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- @formatter:off -->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/album_preView_item_frameLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp"> <!-- @formatter:on -->
+
+    <ImageView
+        android:id="@+id/baidu_album_rv_item_imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/Todo"
+        android:scaleType="center" />
+
+    <ImageView
+        android:id="@+id/baidu_album_rv_item_selectCircleImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/Todo"
+        android:src="@drawable/icon_album_circle" />
+
+</com.google.android.material.card.MaterialCardView>

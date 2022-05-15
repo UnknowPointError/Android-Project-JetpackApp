@@ -1,9 +1,12 @@
 package cn.barry.jetpackapp.pixabay.view
 
-import android.annotation.SuppressLint
 import android.os.Bundle
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.GridLayoutManager
 import cn.barry.base.activity.BaseVBActivity
+import cn.barry.jetpackapp.R
 import cn.barry.jetpackapp.databinding.ActivityPixabayBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -19,28 +22,13 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PixabayActivity : BaseVBActivity<ActivityPixabayBinding, PixabayViewModel>() {
 
-    init { isNeedLazy = true }
+    init {
+        mIsNeedNetWorkLoading = true
+    }
 
     override fun getViewBinding() = ActivityPixabayBinding.inflate(layoutInflater)
     override fun getViewModel(): Lazy<PixabayViewModel> = viewModel()
-    override fun lazyData(){
-        mViewModel.pixabayImageInfo.value ?: mViewModel.fetchImage()
-    }
-
-    @SuppressLint("Range")
-    override fun init(savedInstanceState: Bundle?) {
-        val pixabayAdapter = PixabayAdapter()
-        mBinding.pixabayImageRecyclerView.apply {
-            adapter = pixabayAdapter
-            layoutManager = GridLayoutManager(this@PixabayActivity,2)
-        }
-        mViewModel.pixabayImageInfo.observe(this) {
-            pixabayAdapter.submitList(it.dataArray)
-        }
-        mBinding.pixabaySwipeRefreshLayout.setOnRefreshListener {
-            mViewModel.fetchImage()
-            mBinding.pixabaySwipeRefreshLayout.isRefreshing = false
-        }
+    override fun doInitOnCreate(savedInstanceState: Bundle?) {
     }
 
     /*fun con() {

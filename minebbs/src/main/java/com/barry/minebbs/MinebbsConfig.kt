@@ -14,7 +14,7 @@ object MinebbsConfig {
             "SI6InY2Slk5b2QyUW54SFlnQUNIdUdUTmNaUGFwWFI0aHU2IiwiZXhwIjo0ODAzMzY3MDU" +
             "yLCJpc3MiOiJOeWFuQ2F0ZGEifQ.xg3X537dDEPd1qEs314hhWVwb20sH0NvbTArIBwDtUk"
 
-    const val Base_Url = "https://api.minebbs.com/api/openapi/"
+    const val URL = "https://api.minebbs.com/api/openapi/"
     const val Url_Get_Response_Template = "v1/"
     const val Url_Get_UserIcon = "v1/avatar/{id}"
 }

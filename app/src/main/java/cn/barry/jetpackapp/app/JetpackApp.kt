@@ -24,6 +24,7 @@ class JetpackApp : BaseApp() {
             }
         }
         Thread.setDefaultUncaughtExceptionHandler(BaseAppException())
+        System.loadLibrary("opencv_java4");
     }
 }
 
