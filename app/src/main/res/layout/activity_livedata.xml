@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?> <!-- @formatter:off -->
 <androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/livedata_drawerLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -137,7 +138,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
+        android:layout_gravity="top"
         android:background="@color/black"
         android:gravity="center"
         android:text="@string/DrawerLayout"

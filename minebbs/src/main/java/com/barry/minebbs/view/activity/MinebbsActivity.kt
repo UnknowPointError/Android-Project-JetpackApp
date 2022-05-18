@@ -36,9 +36,11 @@ class MinebbsActivity : BaseVBActivity<ActivityMinebbsBinding, MinebbsViewModel>
             dataList.toString().logInfo()
         }
     }
+
     override fun lazyData(){
         mViewModel.getTemplateEntityInfo()
     }
+
     override fun onSupportNavigateUp(): Boolean{
         return Navigation.findNavController(this,R.id.nav_fragmentContainerView).navigateUp()
     }

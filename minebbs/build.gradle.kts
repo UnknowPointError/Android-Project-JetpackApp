@@ -31,6 +31,7 @@ android {
         }
         kotlinOptions {
             jvmTarget = "17"
+            freeCompilerArgs = listOf("-Xcontext-receivers")
         }
     }
     namespace = "com.barry.minebbs"

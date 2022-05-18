@@ -5,6 +5,7 @@ import androidx.annotation.CallSuper
 import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
+import cn.barry.base.extensions.log
 
 /*************************
  * @Machine: RedmiBook Pro 15 Win11
@@ -17,9 +18,12 @@ abstract class BaseRvVBAdapter<VB : ViewBinding>() : RecyclerView.Adapter<BaseRv
 
     inner class BaseRvVBHolder(val mBinding : VB) : RecyclerView.ViewHolder(mBinding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)= BaseRvVBHolder(getViewBinding(parent)).also { it.initCreateViewHolder() }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)= BaseRvVBHolder(getViewBinding(parent)).apply {
+        parent.accessibilityClassName.log()
+        initCreateViewHolder() }
 
     abstract fun getViewBinding(parent: ViewGroup) : VB
 
-    open fun BaseRvVBHolder.initCreateViewHolder() {  }
+    context (BaseRvVBHolder)
+    open fun initCreateViewHolder() {  }
 }

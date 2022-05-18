@@ -16,16 +16,16 @@ object Configuration {
         /* 应用ID */
         const val application_id = "cn.barry.jetpackapp"
 
-        /* 编译SDK版本 */
+        /* 编译SDK版本 Android 12 */
         const val compile_sdk_version = 31
 
         /* 编译工具版本 */
         const val build_tools_version = "31.0.0"
 
-        /* 最小支持版本 */
+        /* 最小支持版本 Android 6 */
         const val min_sdk_version = 23
 
-        /* 目标支持版本 */
+        /* 目标支持版本 Android 12 */
         const val target_sdk_version = 31
 
         /* 应用版本号 */

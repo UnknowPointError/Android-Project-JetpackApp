@@ -40,6 +40,7 @@ abstract class BaseVBActivity<VB : ViewBinding,VM : BaseViewModel> : AppCompatAc
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        layoutInflater
         setContentView(mBinding.root)
         if (mIsNeedNetWorkLoading) mViewModel.viewState.observe(this) { viewState ->
             viewState

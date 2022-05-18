@@ -50,7 +50,8 @@ class UserIconRvAdapter(val imageList : MutableList<Int>) : BaseRvVBAdapter<Recy
         }
     }
 
-    override fun BaseRvVBHolder.initCreateViewHolder() {
+    context(BaseRvVBHolder)
+    override fun initCreateViewHolder() {
         itemView.setOnClickListener {
             itemViewCallback?.apply { (mBinding) }
         }

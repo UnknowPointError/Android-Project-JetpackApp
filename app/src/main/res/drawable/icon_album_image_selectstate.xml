@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- @formatter:off -->
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"> <!-- @formatter:on -->
+
+    <solid  android:color="@color/album_image_click_state"/>
+
+</shape>

@@ -35,6 +35,8 @@ class LiveDataActivity : AppCompatActivity() {
 
                 livedataTextView.text = viewModel.number.value.toString()
             }
+
+            mBinding.livedataDrawerLayout.open()
         }
     }
 }
