@@ -8,6 +8,7 @@ plugins {
 }
 /* @formatter:off */
 android {
+    namespace = "cn.barry.jetpackapp"
     buildFeatures { viewBinding = true }
     defaultConfig {
         with(Configuration.AppConfigs) {
@@ -36,8 +37,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions { jvmTarget = "17" }
- namespace = "cn.barry.jetpackapp"
+    kotlinOptions {
+        jvmTarget = "17"
+        freeCompilerArgs = listOf("-Xcontext-receivers")
+    }
 }
 
 dependencies {

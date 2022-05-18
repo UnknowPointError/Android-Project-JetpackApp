@@ -10,6 +10,6 @@
     <color name="colorPrimary">#FF6200EE</color>
     <color name="white90">#E6FFFF</color>
     <color name="purpleDark">#C9984FC3</color>
-    <color name="album_circle_inside">#777777</color>
-    <color name="album_image_translate">#401E1E1E</color>
+    <color name="album_circle_inside">#408C8585</color>
+    <color name="album_image_click_state">#401E1E1E</color>
 </resources>

@@ -7,7 +7,6 @@ import cn.barry.jetpackapp.baiduimage.BaiduImageConfig
 import cn.barry.jetpackapp.baiduimage.model.BaiduImageRepository
 import cn.barry.jetpackapp.baiduimage.network.BaiduImageService
 import cn.barry.jetpackapp.baiduimage.view.activity.BaiduImageNavigationViewModel
-import cn.barry.jetpackapp.camera.CameraViewModel
 import cn.barry.jetpackapp.customview.CustomViewViewModel
 import cn.barry.jetpackapp.koin.KoinBaseInterface
 import cn.barry.jetpackapp.koin.KoinRepository
@@ -44,7 +43,6 @@ object Module {
         viewModel { MinebbsViewModel(get()) }
         viewModel { PixabayViewModel(get()) }
         viewModel { CustomViewViewModel() }
-        viewModel { CameraViewModel() }
         viewModel { BaiduImageNavigationViewModel(get()) }
     }
 

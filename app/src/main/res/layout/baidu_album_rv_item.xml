@@ -23,7 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_margin="5dp"
-        android:contentDescription="@string/Todo"
-        android:src="@drawable/icon_album_circle" />
+        android:contentDescription="@string/Todo"/>
 
 </com.google.android.material.card.MaterialCardView>

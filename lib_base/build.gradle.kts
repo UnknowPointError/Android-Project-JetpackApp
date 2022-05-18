@@ -23,7 +23,10 @@ android {
     }
 
     /* Kotlin 相关配置 */
-    kotlinOptions { jvmTarget = "17" }
+    kotlinOptions {
+        jvmTarget = "17"
+        freeCompilerArgs = listOf("-Xcontext-receivers")
+    }
     namespace = "cn.barry.base"
 }
 

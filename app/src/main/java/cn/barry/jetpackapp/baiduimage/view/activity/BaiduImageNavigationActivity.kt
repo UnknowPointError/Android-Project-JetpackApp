@@ -1,7 +1,21 @@
 package cn.barry.jetpackapp.baiduimage.view.activity
 
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
+import android.view.*
+import androidx.annotation.ColorRes
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import cn.barry.base.activity.BaseVBActivity
+import cn.barry.base.view.setStatusBarIsDark
+import cn.barry.base.view.setStatusBarStyle
+import cn.barry.base.view.setTransparentStatusBar
 import cn.barry.jetpackapp.databinding.ActivityBaiduImageNavigationBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -22,7 +36,9 @@ class BaiduImageNavigationActivity : BaseVBActivity<ActivityBaiduImageNavigation
     override fun getViewModel(): Lazy<BaiduImageNavigationViewModel> = viewModel()
 
     override fun doInitOnCreate(savedInstanceState: Bundle?) {
-
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.statusBarColor = Color.TRANSPARENT
+        setStatusBarIsDark(true)
     }
 }
 

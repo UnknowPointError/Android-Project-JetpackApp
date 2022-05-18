@@ -20,6 +20,7 @@ class BaiduImageNavigationViewModel(val repository: BaiduImageRepository) : Base
     var token: String? = null
 
     val imagePath = mutableListOf<Uri>()
+    val imageMapPath = mutableMapOf<String,MutableList<Uri>>()
 
     var adapterPositionFilterColor: MutableList<Int> = mutableListOf()
 

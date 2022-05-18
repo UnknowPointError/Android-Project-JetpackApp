@@ -20,6 +20,7 @@
     <string name="CustomView">CustomView</string>
     <string name="BaiduImage">BaiduImage Project</string>
     <string name="addImage">添加图片 —> 入库</string>
+    <string name="ImageAndVideo">图片和视频</string>
     <string name="TakrPicture">拍照</string>
     <string name="Search">搜 索</string>
     <string name="Image_approximation_float">图片相似值为 : %f</string>
