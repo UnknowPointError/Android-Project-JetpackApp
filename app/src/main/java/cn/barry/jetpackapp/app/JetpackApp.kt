@@ -1,7 +1,7 @@
 package cn.barry.jetpackapp.app
 
-import cn.barry.base.app.BaseApp
-import cn.barry.base.app.BaseAppException
+import com.barry.base.app.BaseApp
+import com.barry.base.app.BaseAppException
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -18,10 +18,8 @@ class JetpackApp : BaseApp() {
     override fun onCreate() {
         super.onCreate()
         startKoin {
-            with(Module) {
-                androidContext(this@JetpackApp)
-                modules(listOf(netWorkModule, servicesModule, viewModelModule, repositoryModule))
-            }
+            androidContext(this@JetpackApp)
+            modules(listOf(netWorkModule, servicesModule, viewModelModule, factoryModule))
         }
         Thread.setDefaultUncaughtExceptionHandler(BaseAppException())
     }

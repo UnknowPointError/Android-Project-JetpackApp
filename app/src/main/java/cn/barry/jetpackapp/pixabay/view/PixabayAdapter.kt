@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
-import cn.barry.base.adapter.BaseRvVBListAdapter
-import cn.barry.base.extensions.logger
+import com.barry.base.adapter.BaseRvVBListAdapter
+import com.barry.base.extensions.logger
 import cn.barry.jetpackapp.R
 import cn.barry.jetpackapp.databinding.PixabayRvImageItemBinding
 import cn.barry.jetpackapp.pixabay.PixabayEntity_Child_Image

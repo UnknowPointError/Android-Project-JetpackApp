@@ -1,7 +1,7 @@
 package cn.barry.jetpackapp.koin
 
 import android.os.Bundle
-import cn.barry.base.activity.BaseVBActivity
+import com.barry.base.activity.BaseVBActivity
 import cn.barry.jetpackapp.databinding.ActivityKoinBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

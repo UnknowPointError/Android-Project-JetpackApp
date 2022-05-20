@@ -4,7 +4,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import cn.barry.base.fragment.BaseVBFragment
+import com.barry.base.fragment.BaseVBFragment
 import cn.barry.jetpackapp.R
 import cn.barry.jetpackapp.baiduimage.view.activity.BaiduImageNavigationViewModel
 import cn.barry.jetpackapp.databinding.FragmentBaiduImageAlbumPhotoBinding

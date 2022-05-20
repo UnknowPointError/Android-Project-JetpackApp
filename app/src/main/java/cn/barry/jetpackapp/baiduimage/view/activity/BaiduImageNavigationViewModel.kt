@@ -3,8 +3,8 @@ package cn.barry.jetpackapp.baiduimage.view.activity
 import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import cn.barry.base.extensions.logger
-import cn.barry.base.viewmodel.BaseViewModel
+import com.barry.base.extensions.logger
+import com.barry.base.viewmodel.BaseViewModel
 import cn.barry.jetpackapp.baiduimage.model.response.BaiduImageAccessTokenEntity
 import cn.barry.jetpackapp.baiduimage.model.BaiduImageRepository
 

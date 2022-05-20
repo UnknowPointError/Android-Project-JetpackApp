@@ -4,9 +4,9 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import cn.barry.base.adapter.BaseRvVBAdapter
-import cn.barry.base.app.appContext
-import cn.barry.base.extensions.log
+import com.barry.base.adapter.BaseRvVBAdapter
+import com.barry.base.app.appContext
+import com.barry.base.extensions.log
 import cn.barry.jetpackapp.databinding.AlbumBottomsheetdialogRvItemBinding
 import com.bumptech.glide.Glide
 

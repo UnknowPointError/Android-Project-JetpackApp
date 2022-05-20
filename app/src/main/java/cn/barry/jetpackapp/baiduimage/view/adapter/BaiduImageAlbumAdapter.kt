@@ -9,8 +9,8 @@ import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.setMargins
 import androidx.navigation.findNavController
-import cn.barry.base.adapter.BaseRvVBAdapter
-import cn.barry.base.app.appContext
+import com.barry.base.adapter.BaseRvVBAdapter
+import com.barry.base.app.appContext
 import cn.barry.jetpackapp.R
 import cn.barry.jetpackapp.databinding.BaiduAlbumRvItemBinding
 import com.bumptech.glide.Glide

@@ -5,8 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
-import cn.barry.base.extensions.logger
-import cn.barry.base.fragment.BaseVBFragment
+import com.barry.base.extensions.logger
+import com.barry.base.fragment.BaseVBFragment
 import cn.barry.jetpackapp.databinding.FragmentPixabayBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

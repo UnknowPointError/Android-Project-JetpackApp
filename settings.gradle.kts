@@ -13,4 +13,3 @@ dependencyResolutionManagement {
 rootProject.name = "JetpackApp"
 include(":app")
 include(":lib_base")
-include(":minebbs")

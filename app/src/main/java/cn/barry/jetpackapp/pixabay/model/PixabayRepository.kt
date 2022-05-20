@@ -2,7 +2,7 @@ package cn.barry.jetpackapp.pixabay.model
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import cn.barry.base.network.volleyRequest
+import com.barry.base.network.volleyRequest
 import cn.barry.jetpackapp.pixabay.PixabayEntity
 import cn.barry.jetpackapp.pixabay.PixabayEntity_Child_Image
 import cn.barry.jetpackapp.pixabay.PixabayEntity_Flow

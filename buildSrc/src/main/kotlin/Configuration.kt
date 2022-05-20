@@ -37,6 +37,8 @@ object Configuration {
         /* 是否单独运行模块 */
         const val isSingleModule = false
 
+        /* free_compiler_Args */
+        val free_compiler_Args = listOf("-Xcontext-receivers")
     }
 
     /* 版本 */
@@ -181,15 +183,5 @@ object Configuration {
         * - Github : [https://github.com/JessYanCoding/AndroidAutoSize]
         * */
         const val autosize = "com.github.JessYanCoding:AndroidAutoSize:v1.2.1"
-    }
-
-    object Plugins {
-        const val android_application = "com.android.application"
-        const val android_library = "com.android.library"
-        const val androidx_navigation_safeargs = "androidx.navigation.safeargs"
-
-        const val kapt = "kapt"
-        const val kotlin_parcelize = "kotlin-parcelize"
-        const val serialization = "plugin.serialization"
     }
 }

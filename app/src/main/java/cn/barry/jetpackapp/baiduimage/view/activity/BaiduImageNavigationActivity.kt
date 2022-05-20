@@ -12,10 +12,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import cn.barry.base.activity.BaseVBActivity
-import cn.barry.base.view.setStatusBarIsDark
-import cn.barry.base.view.setStatusBarStyle
-import cn.barry.base.view.setTransparentStatusBar
+import com.barry.base.activity.BaseVBActivity
+import com.barry.base.view.setStatusBarIsDark
+import com.barry.base.view.setStatusBarStyle
+import com.barry.base.view.setTransparentStatusBar
 import cn.barry.jetpackapp.databinding.ActivityBaiduImageNavigationBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

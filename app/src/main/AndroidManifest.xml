@@ -39,30 +39,38 @@
             android:name=".baiduimage.view.activity.BaiduImageNavigationActivity"
             android:theme="@style/Theme.NormalTheme.NoActionBar"
             android:exported="false" />
+
         <activity
             android:name=".customview.CustomViewActivity"
             android:exported="false" />
+
         <activity
             android:name=".pixabay.view.PixabayActivity"
             android:exported="false"
             android:theme="@style/MaterialNoActionBar" />
+
         <activity
-            android:name="com.barry.minebbs.view.activity.MinebbsActivity"
+            android:name="cn.barry.jetpackapp.minebbs.view.activity.MinebbsActivity"
             android:exported="false" />
+
         <activity
             android:name=".material.MaterialActivity"
             android:exported="false"
             android:theme="@style/MaterialNoActionBar" />
+
         <activity
             android:name=".livedata.LiveDataActivity"
             android:exported="false"
             android:theme="@style/JetPackNoActionBar" />
+
         <activity
             android:name=".lifecycle.LifeCycleActivity"
             android:exported="false" />
+
         <activity
             android:name=".koin.KoinActivity"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -71,5 +79,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 </manifest>

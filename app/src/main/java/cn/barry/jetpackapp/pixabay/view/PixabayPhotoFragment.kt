@@ -4,14 +4,10 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
-import cn.barry.base.coroutine.uiLaunch
-import cn.barry.base.extensions.logger
-import cn.barry.base.fragment.BaseVBFragment
 import cn.barry.jetpackapp.R
 import cn.barry.jetpackapp.databinding.FragmentPixabayPhotoBinding
 import cn.barry.jetpackapp.pixabay.PixabayEntity_Child_Image
+import com.barry.base.fragment.BaseVBFragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
