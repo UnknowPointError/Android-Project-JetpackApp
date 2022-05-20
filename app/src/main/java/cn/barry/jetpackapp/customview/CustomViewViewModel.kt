@@ -1,6 +1,6 @@
 package cn.barry.jetpackapp.customview
 
-import cn.barry.base.viewmodel.BaseViewModel
+import com.barry.base.viewmodel.BaseViewModel
 
 /*************************
  * @Machine: RedmiBook Pro 15 Win11

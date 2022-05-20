@@ -3,7 +3,7 @@ package cn.barry.jetpackapp.customview
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import cn.barry.base.activity.BaseVBActivity
+import com.barry.base.activity.BaseVBActivity
 import cn.barry.jetpackapp.R
 import cn.barry.jetpackapp.customview.fragment.ViewFourFragment
 import cn.barry.jetpackapp.customview.fragment.ViewOneFragment

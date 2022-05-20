@@ -3,7 +3,7 @@ package cn.barry.jetpackapp.pixabay.view
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import cn.barry.base.viewmodel.BaseViewModel
+import com.barry.base.viewmodel.BaseViewModel
 import cn.barry.jetpackapp.pixabay.PixabayEntity
 import cn.barry.jetpackapp.pixabay.PixabayEntity_Child_Image
 import cn.barry.jetpackapp.pixabay.model.PixabayRepository

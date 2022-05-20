@@ -12,9 +12,9 @@ import android.view.SurfaceView
 import android.view.Window
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
-import cn.barry.base.coroutine.defaultCoroutine
-import cn.barry.base.extensions.log
-import cn.barry.base.extensions.logger
+import com.barry.base.coroutine.defaultCoroutine
+import com.barry.base.extensions.log
+import com.barry.base.extensions.logger
 import kotlinx.coroutines.*
 import kotlin.concurrent.thread
 import kotlin.coroutines.coroutineContext

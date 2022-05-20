@@ -5,7 +5,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.GridLayoutManager
-import cn.barry.base.activity.BaseVBActivity
+import com.barry.base.activity.BaseVBActivity
 import cn.barry.jetpackapp.R
 import cn.barry.jetpackapp.databinding.ActivityPixabayBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel

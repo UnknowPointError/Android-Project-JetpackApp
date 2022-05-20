@@ -10,9 +10,9 @@ import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import cn.barry.base.extensions.log
-import cn.barry.base.extensions.logger
-import cn.barry.base.fragment.BaseVBFragment
+import com.barry.base.extensions.log
+import com.barry.base.extensions.logger
+import com.barry.base.fragment.BaseVBFragment
 import cn.barry.jetpackapp.R
 import cn.barry.jetpackapp.baiduimage.view.activity.BaiduImageNavigationViewModel
 import cn.barry.jetpackapp.databinding.FragmentBaiduImageBinding

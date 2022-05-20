@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/userIconFragment">
+
+    <fragment
+        android:id="@+id/userIconFragment"
+        android:name="cn.barry.jetpackapp.minebbs.view.fragment.UserIconFragment"
+        android:label="UserIconFragment">
+
+        <action
+            android:id="@+id/action_userIcon_to_fullScreen"
+            app:destination="@id/userIconFullScreenFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userIconFullScreenFragment"
+        android:name="cn.barry.jetpackapp.minebbs.view.fragment.UserIconFullScreenFragment"
+        android:label="UserIconFullScreenFragment" >
+
+        <action
+            android:id="@+id/action_fullScreen_to_userIcon"
+            app:destination="@id/userIconFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+
+</navigation>

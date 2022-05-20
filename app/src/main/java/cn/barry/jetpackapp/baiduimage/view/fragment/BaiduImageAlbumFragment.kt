@@ -11,9 +11,9 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import cn.barry.base.app.appContext
-import cn.barry.base.extensions.log
-import cn.barry.base.fragment.BaseVBFragment
+import com.barry.base.app.appContext
+import com.barry.base.extensions.log
+import com.barry.base.fragment.BaseVBFragment
 import cn.barry.jetpackapp.R
 import cn.barry.jetpackapp.baiduimage.view.activity.BaiduImageNavigationViewModel
 import cn.barry.jetpackapp.baiduimage.view.adapter.BaiduImageAlbumAdapter

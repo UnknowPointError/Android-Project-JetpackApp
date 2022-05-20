@@ -3,7 +3,7 @@ package cn.barry.jetpackapp.koin
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import cn.barry.base.viewmodel.BaseViewModel
+import com.barry.base.viewmodel.BaseViewModel
 
 /*************************
  * @ProjectName: JetpackApp
