@@ -2,6 +2,7 @@ package cn.barry.jetpackapp.app
 
 import cn.barry.jetpackapp.baiduimage.view.activity.BaiduImageNavigationViewModel
 import cn.barry.jetpackapp.customview.CustomViewViewModel
+import cn.barry.jetpackapp.downloads.DownloadViewModel
 import cn.barry.jetpackapp.koin.KoinViewModel
 import cn.barry.jetpackapp.pixabay.view.PixabayViewModel
 import cn.barry.jetpackapp.minebbs.view.activity.MinebbsViewModel
@@ -22,4 +23,5 @@ val viewModelModule = module {
     viewModel { PixabayViewModel(get()) }
     viewModel { CustomViewViewModel() }
     viewModel { BaiduImageNavigationViewModel(get()) }
+    viewModel { DownloadViewModel() }
 }

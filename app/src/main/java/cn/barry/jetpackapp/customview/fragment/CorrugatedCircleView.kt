@@ -7,17 +7,8 @@ import android.graphics.DiscretePathEffect
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.MotionEvent
-import android.view.SurfaceHolder
 import android.view.SurfaceView
-import android.view.Window
-import androidx.core.view.isGone
-import androidx.core.view.isVisible
-import com.barry.base.coroutine.defaultCoroutine
-import com.barry.base.extensions.log
-import com.barry.base.extensions.logger
 import kotlinx.coroutines.*
-import kotlin.concurrent.thread
-import kotlin.coroutines.coroutineContext
 
 /*************************
  * @Machine: RedmiBook Pro 15 Win11
@@ -52,7 +43,7 @@ class CorrugatedCircleView @JvmOverloads constructor(
 
 
     init {
-        defaultCoroutine.launch {
+        CoroutineScope(Dispatchers.Default).launch {
             while (true)
                 if (holder.surface.isValid) {
                     val canvas = holder.lockCanvas()

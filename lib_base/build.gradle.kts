@@ -37,14 +37,16 @@ android {
             jvmTarget = "17"
             freeCompilerArgs = free_compiler_Args
         }
+
+
     }
+
 }
 
 
 dependencies {
 
     with(Configuration.Dependencies) {
-
         api(android_koin)
         api(androidx_core)
         api(androidx_activity)
@@ -80,7 +82,6 @@ dependencies {
         testApi(junit_junit)
         androidTestApi(androidx_test_junit)
         androidTestApi(androidx_test_espresso)
-
     }
 
 }

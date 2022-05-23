@@ -6,6 +6,7 @@ import android.widget.Toast
 import com.barry.base.app.appContext
 import com.google.android.material.snackbar.Snackbar
 import com.orhanobut.logger.Logger
+import java.lang.ref.WeakReference
 
 /*************************
  * @Machine: RedmiBook Pro 15
@@ -50,23 +51,23 @@ fun Any?.log(level :  Int = Logger.INFO,tag: String = "PRETTY_LOGGER") {
     }
 }
 
-private var mToast: Toast? = null
+private var mToast: WeakReference<Toast>? = null
 private var mToastHide: Boolean = false
 
 /* String Toast */
 fun String.toast(isShort: Boolean = true) {
     if (mToastHide) return
-    mToast?.cancel()
-    mToast = Toast.makeText(appContext, this, if (isShort) Toast.LENGTH_SHORT else Toast.LENGTH_LONG)
-    mToast?.show()
+    mToast?.get()?.cancel()
+    mToast = WeakReference(Toast.makeText(appContext, this, if (isShort) Toast.LENGTH_SHORT else Toast.LENGTH_LONG))
+    mToast?.get()?.show()
 }
 
 /* CharSequence Toast */
 fun CharSequence.toast(isShort: Boolean = true) {
     if (mToastHide) return
-    mToast?.cancel()
-    mToast = Toast.makeText(appContext, this, if (isShort) Toast.LENGTH_SHORT else Toast.LENGTH_LONG)
-    mToast?.show()
+    mToast?.get()?.cancel()
+    mToast = WeakReference(Toast.makeText(appContext, this, if (isShort) Toast.LENGTH_SHORT else Toast.LENGTH_LONG))
+    mToast?.get()?.show()
 }
 
 /* SnackBar Show 字符串参数 */

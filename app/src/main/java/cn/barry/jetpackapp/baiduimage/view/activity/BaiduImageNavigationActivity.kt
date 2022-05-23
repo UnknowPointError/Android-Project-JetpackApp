@@ -1,22 +1,11 @@
 package cn.barry.jetpackapp.baiduimage.view.activity
 
 import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
-import android.view.*
-import androidx.annotation.ColorRes
-import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
+import android.view.WindowManager
+import cn.barry.jetpackapp.databinding.ActivityBaiduImageNavigationBinding
 import com.barry.base.activity.BaseVBActivity
 import com.barry.base.view.setStatusBarIsDark
-import com.barry.base.view.setStatusBarStyle
-import com.barry.base.view.setTransparentStatusBar
-import cn.barry.jetpackapp.databinding.ActivityBaiduImageNavigationBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /*************************

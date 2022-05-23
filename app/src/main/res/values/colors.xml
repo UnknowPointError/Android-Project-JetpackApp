@@ -12,4 +12,5 @@
     <color name="purpleDark">#C9984FC3</color>
     <color name="album_circle_inside">#408C8585</color>
     <color name="album_image_click_state">#401E1E1E</color>
+    <color name="red_700">#FFD32F2F</color>
 </resources>

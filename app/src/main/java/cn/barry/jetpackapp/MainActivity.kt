@@ -1,5 +1,6 @@
 package cn.barry.jetpackapp
 
+import android.app.DownloadManager
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import com.barry.base.activity.BaseVBActivity
@@ -9,6 +10,7 @@ import cn.barry.jetpackapp.R.*
 import cn.barry.jetpackapp.baiduimage.view.activity.BaiduImageNavigationActivity
 import cn.barry.jetpackapp.customview.CustomViewActivity
 import cn.barry.jetpackapp.databinding.ActivityMainBinding
+import cn.barry.jetpackapp.downloads.DownloadActivity
 import cn.barry.jetpackapp.koin.KoinActivity
 import cn.barry.jetpackapp.koin.KoinViewModel
 import cn.barry.jetpackapp.lifecycle.LifeCycleActivity
@@ -78,6 +80,9 @@ class MainActivity : BaseVBActivity<ActivityMainBinding, KoinViewModel>() {
             }
             buttonBaiduImage.setOnClickListener {
                 startActivity<BaiduImageNavigationActivity> { }
+            }
+            buttonDownload.setOnClickListener {
+                startActivity<DownloadActivity> {  }
             }
         }
     }

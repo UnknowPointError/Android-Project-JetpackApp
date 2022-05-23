@@ -2,6 +2,7 @@ package cn.barry.jetpackapp.customview
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.barry.base.activity.BaseVBActivity
 import cn.barry.jetpackapp.R
@@ -31,6 +32,9 @@ class CustomViewActivity : BaseVBActivity<ActivityCustomViewBinding, CustomViewV
     override fun getViewBinding() = ActivityCustomViewBinding.inflate(layoutInflater)
     override fun getViewModel(): Lazy<CustomViewViewModel> = viewModel()
     override fun doInitOnCreate(savedInstanceState: Bundle?) {
+        mContainerAdapter = ContainerAdapter(fragmentArray,supportFragmentManager,lifecycle)
+        mBinding.customViewViewPager.isUserInputEnabled = false
+        mBinding.customViewViewPager.adapter = mContainerAdapter
         mBinding.customViewViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)

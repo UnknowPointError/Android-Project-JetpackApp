@@ -12,6 +12,13 @@ buildscript {
     }
 }
 
-/* 自定义任务 */
-task("cleanAll") { delete(rootProject.buildDir) }
-task("printStringClass") { println("Hello,JetPackApp!") }
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven("https://www.jitpack.io")
+        maven("https://maven.aliyun.com/nexus/content/groups/public/")
+        maven("https://maven.aliyun.com/nexus/content/repositories/jcenter")
+        flatDir { dirs("libs") }
+    }
+}

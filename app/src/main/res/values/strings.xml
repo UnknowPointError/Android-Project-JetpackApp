@@ -19,6 +19,7 @@
     <string name="Pixabay">Pixabay</string>
     <string name="CustomView">CustomView</string>
     <string name="BaiduImage">BaiduImage Project</string>
+    <string name="Download">Download</string>
     <string name="addImage">添加图片 —> 入库</string>
     <string name="ImageAndVideo">图片和视频</string>
     <string name="TakrPicture">拍照</string>

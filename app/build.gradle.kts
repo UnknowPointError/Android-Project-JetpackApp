@@ -61,6 +61,8 @@ android {
             jvmTarget = "17"
             freeCompilerArgs = free_compiler_Args
         }
+
+
     }
 
 }
@@ -69,5 +71,8 @@ android {
 dependencies {
 
     implementation(project(mapOf("path" to ":lib_base")))
+    implementation("androidx.appcompat:appcompat:1.3.0")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
 
 }

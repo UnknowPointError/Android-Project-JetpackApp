@@ -106,6 +106,20 @@
             app:rippleColor="@color/purpleDark"
             app:strokeColor="@color/colorPrimary"
             app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_download"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/purple_200"
+            android:text="@string/Download"
+            android:textAllCaps="false"
+            app:cornerRadius="999dp"
+            app:rippleColor="@color/purpleDark"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="1dp" />
+
     </LinearLayout>
 
 </ScrollView>
